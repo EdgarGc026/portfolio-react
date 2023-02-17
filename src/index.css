@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .grid-layout {
+    @apply w-11/12 grid grid-cols-12 max-w-[1100px] h-full m-auto gap-3 overflow-hidden items-center
+  }
+
+  .hero-texts {
+    @apply pr-5 col-span-7
+  }
+
+  .btn-cv {
+    @apply w-[130px] inline-block text-center py-3 px-0 no-underline bg-eerie-black text-just-white
+  }
+
+  .parraph {
+    @apply mb-5 font-normal text-2xl
+  }
+
+  .about-us {
+    @apply h-auto pt-7 pb-14 bg-eerie-black text-just-white
+  }
+
+  .portfolio--icons {
+    @apply text-[25px] mt-0 ml-[5px] mb-0 mr-3
+  }
+
+  .button {
+    @apply w-[50%] max-w-[260px] h-[50px] min-w-[110px] my-[5px] mx-[10px] p-[5px] flex justify-center items-center text-[14px] rounded-xl bg-eerie-black no-underline text-just-white cursor-pointer
+  }
+}
