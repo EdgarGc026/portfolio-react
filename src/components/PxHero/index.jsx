@@ -26,8 +26,8 @@ const PxHero = () => {
     <>
       <header className="h-[500px]">
         <div className="grid-layout">
-          <div className="col-span-7 pr-5 text-justify">
-            <h1 className="font-semibold text-4xl">
+          <div className="col-span-6 pr-5 text-justify font-raleway">
+            <h1 className="font-semibold text-[2.5rem]">
               {headerData.name} <br />
               <span className="font-normal">{headerData.profession}</span>
             </h1>
@@ -38,7 +38,7 @@ const PxHero = () => {
               target="_blank"
             >Get CV</a>
           </div>
-          <div className="w-full h-auto col-span-5">
+          <div className="w-full h-auto col-span-6">
             <img className="img" src={heroLogo} alt="hero-image" />
           </div>
         </div>

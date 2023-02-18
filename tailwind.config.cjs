@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'raleway': ['Raleway', 'sans-serif']
+      },
       colors: {
         "eerie-black": "#151515",
         "just-white": "#ffffff",

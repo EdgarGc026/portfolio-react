@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
   .grid-layout {
-    @apply w-11/12 grid grid-cols-12 max-w-[1100px] h-full m-auto gap-3 overflow-hidden items-center
+    @apply w-[90%] grid grid-cols-12 max-w-[1100px] h-full m-auto gap-[10px] overflow-hidden items-center
   }
 
   .hero-texts {
@@ -12,11 +13,11 @@
   }
 
   .btn-cv {
-    @apply w-[130px] inline-block text-center py-3 px-0 no-underline bg-eerie-black text-just-white
+    @apply w-[130px] inline-block text-center py-[10px] px-0 no-underline bg-eerie-black text-just-white
   }
 
   .parraph {
-    @apply mb-5 font-normal text-2xl
+    @apply mb-5 font-normal text-[1.4rem]
   }
 
   .about-us {
