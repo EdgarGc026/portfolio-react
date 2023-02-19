@@ -11,22 +11,22 @@
         },
         {
           "id": 2,
-          "name": "WordPress",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit"
-        },
-        {
-          "id": 3,
           "name": "PHP",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit"
         },
         {
+          "id": 3,
+          "name": "Grails",
+          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit"
+        },
+        {
           "id": 4,
-          "name": "Vue",
+          "name": "Java",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit"
         },
         {
           "id": 5,
-          "name": "Nodejs",
+          "name": "React",
           "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit"
         },
         {

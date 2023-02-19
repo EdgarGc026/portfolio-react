@@ -8,6 +8,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import {
   faLaravel,
+  faJava,
   faWordpressSimple,
   faPhp,
   faJs,
@@ -28,6 +29,7 @@ import PxAbout from "./components/PxAbout";
 
 library.add(
   faLaravel,
+  faJava,
   faWordpressSimple,
   faPhp,
   faReact,
