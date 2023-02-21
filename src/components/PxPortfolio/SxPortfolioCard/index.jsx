@@ -30,8 +30,8 @@ const SxPortfolioCard = () => {
         {portfolioCardData.map((param) => {
           return (
             <article className="w-max-[90%] my-[15px] mx-auto" key={param.id}>
-              <h3>{param.name}.</h3>
-              <p className="text-[1.1rem] py-3" style={{ padding: "auto" }}>
+              <h3 className="font-semibold text-xl">{param.name}.</h3>
+              <p className="text-[1.1rem] py-2" style={{ padding: "auto" }}>
                 {param.description}
               </p>
               <div className="flex items-center py-[10px] px-[5px]">
@@ -51,7 +51,7 @@ const SxPortfolioCard = () => {
                   className="w-[25px]"
                 />}
               </div>
-              <div className="button-container" style={{ borderBottom: "2px #151515" }}>
+              <div className="button-container">
                 <a className="button" target="_blank" href={param.source}>
                   Source code
                   <FontAwesomeIcon icon={['fab', 'github']} className="fab fa text-[20px] ml-[5px] text-center" />
