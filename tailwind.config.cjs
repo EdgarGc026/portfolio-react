@@ -6,6 +6,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        //grid mobile layout
+        'grid-layout-mobile': 'repeat(auto-fit, minmax(170px, 1fr))'
+      },
       fontFamily: {
         'raleway': ['Raleway', 'sans-serif']
       },

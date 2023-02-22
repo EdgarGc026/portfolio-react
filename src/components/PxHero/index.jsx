@@ -25,7 +25,7 @@ const PxHero = () => {
   return (
     <>
       <header className="h-[500px]">
-        <div className="grid-layout">
+        <div className="sm:grid-layout grid-layout-mobile">
           <div className="col-span-6 pr-5 text-justify font-raleway">
             <h1 className="font-semibold text-[2.5rem]">
               {headerData.name} <br />
@@ -39,7 +39,7 @@ const PxHero = () => {
             >Get CV</a>
           </div>
           <div className="w-full h-auto col-span-6">
-            <img className="img" src={heroLogo} alt="hero-image" />
+            <img className="sm:my-[20px] w-[95%] max-w-[450px] sm:mx-0 grid" src={heroLogo} alt="hero-image" />
           </div>
         </div>
       </header>
