@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { WEB_URL } from "../../constants/index";
+import { LOCAL_URL } from "../../constants/index";
 import heroLogo from "../../assets/hero.svg";
 
 const PxHero = () => {
@@ -8,7 +8,7 @@ const PxHero = () => {
   useEffect(() => {
     async function getHeroData() {
       try {
-        const response = await fetch(WEB_URL);
+        const response = await fetch(LOCAL_URL);
         const data = await response.json();
         setHeaderData({ name: data.english.name, profession: data.english.profession });
       } catch (error) {
