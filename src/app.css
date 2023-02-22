@@ -26,7 +26,7 @@
 /* Footer */
 [class^="footer-item"] a {
   color: var(--just-white);
-  font-size: 30px;
+  font-size: 50px;
 }
 
 [class^="footer-item"] a:hover {
