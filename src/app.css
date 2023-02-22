@@ -9,12 +9,11 @@
   text-align: center;
 }
 
-/* Button from portfolio card */
 .button-container {
   width: 100%;
   display: flex;
   justify-content: center;
-  border-bottom: 2px #151515 dotted;
+  border-bottom: 2px var(--eerie-black) dotted;
 }
 
 .button-container [class^="fab fa"] {
@@ -23,10 +22,9 @@
   text-align: center;
 }
 
-/* Footer */
 [class^="footer-item"] a {
   color: var(--just-white);
-  font-size: 50px;
+  font-size: 30px;
 }
 
 [class^="footer-item"] a:hover {
