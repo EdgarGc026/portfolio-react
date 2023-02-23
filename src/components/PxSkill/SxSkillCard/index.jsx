@@ -28,16 +28,16 @@ const SxSkillCard = () => {
 
   return (
     <>
-      <div className="w-full h-full col-span-full flex justify-evenly gap-5 items-center flex-wrap mt-[10px] mb-[15px]">
+      <div className="w-full h-auto col-span-full flex justify-evenly gap-5 items-center flex-wrap my-4">
         {skillCardData.map((item, index) => {
           return (
-            <div className="w-[30%] h-[220px] py-5 px-3 bg-just-white shadow-card-shadow text-center" key={item.id}>
+            <div className="sm:w-[30%] w-[90%] h-[220px] py-5 px-3 sm:flex-shrink-0 bg-just-white shadow-card-shadow text-center" key={item.id}>
               {
                 iconsName[index] == missingIcon
                   ? <img className="w-[50px] h-[50px] inline-block text-[50px] text-center overflow-visible box-content" src={GrailsSVG} alt="grails-icon" />
                   : <FontAwesomeIcon icon={["fab", iconsName[index]]} className="text-[50px] text-center" />
               }
-              <h3 className="font-semibold text-lg my-5">{item.name}.</h3>
+              <h3 className="font-semibold sm:text-lg text-xl sm:my-5 m-[15px]">{item.name}.</h3>
               <p className="hidden">{item.description}.</p>
             </div>
           );
