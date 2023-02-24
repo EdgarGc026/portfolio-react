@@ -24,24 +24,38 @@ const SxPortfolioCard = () => {
     return <></>;
   }
 
+  const variantMap = {
+    container: "col-span-full row-span-full mb-5",
+    cardItem: {
+      container: "w-max-[90%] my-[15px] mx-auto",
+      title: "font-semibold text-xl",
+      description: "text-[1.1rem] py-2",
+      iconContainer: "flex items-center py-[10px] px-[5px]",
+      icon: "portfolio--icons",
+      buttonContainer: "button-container",
+      button: "button",
+      buttonIcon: "fab fa text-[20px] ml-[5px] text-center"
+    }
+  };
+
   return (
     <>
-      <div className="col-span-full row-span-full mb-5">
+      <div className={variantMap.container}>
         {portfolioCardData.map((param) => {
           return (
-            <article className="w-max-[90%] my-[15px] mx-auto" key={param.id}>
-              <h3 className="font-semibold text-xl">{param.name}.</h3>
-              <p className="text-[1.1rem] py-2" style={{ padding: "auto" }}>
+            <article className={variantMap.cardItem.container} key={param.id}>
+              <h3 className={variantMap.cardItem.title}>{param.name}.</h3>
+              <p className={variantMap.cardItem.description} style={{ padding: "auto" }}>
                 {param.description}
               </p>
-              <div className="flex items-center py-[10px] px-[5px]">
+              <div className={variantMap.cardItem.iconContainer}>
                 <span>Technologies: </span>
                 {param.technologies.map((icon) => {
                   return (
                     <div key={icon.id}>
                       <FontAwesomeIcon
                         icon={['fab', icon.name]}
-                        className="portfolio--icons"
+                        className={variantMap.cardItem.icon}
                       />
                     </div>
                   );
@@ -51,16 +65,16 @@ const SxPortfolioCard = () => {
                   className="w-[25px]"
                 />}
               </div>
-              <div className="button-container">
-                <a className="button" target="_blank" href={param.source}>
+              <div className={variantMap.cardItem.buttonContainer}>
+                <a className={variantMap.cardItem.button} target="_blank" href={param.source}>
                   Source code
-                  <FontAwesomeIcon icon={['fab', 'github']} className="fab fa text-[20px] ml-[5px] text-center" />
+                  <FontAwesomeIcon icon={['fab', 'github']} className={variantMap.cardItem.buttonIcon} />
                 </a>
-                <a className="button" target="_blank" href={param.demo}>
+                <a className={variantMap.cardItem.button} target="_blank" href={param.demo}>
                   Demo
                   <FontAwesomeIcon
                     icon={['fab', 'firefox-browser']}
-                    className="fab fa text-[20px] ml-[5px] text-center"
+                    className={variantMap.cardItem.buttonIcon}
                   />
                 </a>
               </div>
