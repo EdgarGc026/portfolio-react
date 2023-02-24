@@ -21,26 +21,36 @@ const PxAbout = () => {
   if (!aboutData) {
     return <></>;
   }
+  const variantMap = {
+    container: "about-us",
+    layout: "grid-layout",
+    infoContainer: "col-span-full",
+    title: "text-[2.5rem] text-center font-semibold",
+    description: "parraph mt-2 text-gray-c",
+    infoImageContainer: "col-span-full flex flex-col justify-center items-center flex-wrap",
+    image: "w-[200px] rounded-lg",
+    legendText: "pt-[10px] text-center text-[1rem] text-just-white"
+  };
 
   return (
     <>
-      <section className="about-us">
-        <section className="grid-layout">
+      <section className={variantMap.container}>
+        <section className={variantMap.layout}>
           {aboutData.map((param, index) => {
             return (
-              <div key={index} className="col-span-full">
-                <h2 className="text-[2.5rem] text-center font-semibold">About me</h2>
-                <p className="parraph mt-2 text-gray-c">{param.description} 😎</p>
+              <div key={index} className={variantMap.infoContainer}>
+                <h2 className={variantMap.title}>About me</h2>
+                <p className={variantMap.description}>{param.description} 😎</p>
               </div>
             );
           })}
-          <div className="col-span-full flex flex-col justify-center items-center flex-wrap">
+          <div className={variantMap.infoImageContainer}>
             <img
-              className="w-[200px] rounded-lg"
+              className={variantMap.image}
               src={perfilImage}
               alt="Perfil-image"
             />
-            <span className="pt-[10px] text-center text-[1rem] text-just-white"> loved food 🤤</span>
+            <span className={variantMap.legendText}> loved food 🤤</span>
           </div>
         </section>
       </section>
