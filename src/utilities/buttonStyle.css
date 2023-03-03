@@ -1,0 +1,9 @@
+@layer utilities {
+  .button-hero {
+    @apply w-[130px] inline-block text-center py-[10px] px-0 no-underline bg-eerie-black text-just-white
+  }
+  
+  .button-portfolioItem {
+    @apply w-[50%] max-w-[260px] h-[50px] min-w-[110px] my-[5px] mx-[10px] p-[5px] flex justify-center items-center text-[14px] rounded-xl bg-eerie-black no-underline text-just-white cursor-pointer hover:bg-just-white hover:text-eerie-black hover:border-eerie-black hover:border-2 focus:border-solid
+  }
+}

@@ -29,7 +29,7 @@ const PxHero = () => {
     title: "font-semibold text-[2.5rem]",
     description: "font-normal",
     hidden: "parraph",
-    button: "btn-cv",
+    button: "button-hero",
     secondColumn: "w-full h-auto col-span-6",
     image: "sm:my-[20px] w-[95%] max-w-[450px] sm:mx-0 grid"
   };

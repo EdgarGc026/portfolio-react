@@ -1,0 +1,56 @@
+import React, { useState, useEffect } from "react"
+import { Meta, Story, Canvas, ArgsTable, Preview } from "@storybook/addon-docs"
+import Button from "."
+
+<Meta
+  title="Basics/CxButton/Button"
+  component={Button}
+  argTypes={{
+    variant: {
+      name: "Variant",
+      control: { type: "select" }
+    },
+    as: { table: { disable: true } },
+    className: { table: { disable: true } },
+    children: {
+      name: "Text",
+      control: { type: "text" },
+    },
+    bg: {
+      name: "Background color",
+      control: {
+        type: "select",
+        labels: {
+          "bg-gray-warm-light": "Light"
+        },
+      },
+      options: [
+        "bg-gray-warm-light",
+      ]
+    }
+  }}
+  parameters={{ chromatic: { disable: false } }}
+/>
+
+<ArgsTable of ={Button} />
+
+<Canvas>
+  <Story name="Button" args={{variant: "heroButton",  bg: "bg-gray-warn-light"}}>
+    {(args) => {
+      const [button, setButton] = useState(null)
+      useEffect(() => {
+        fetch(`/buttons/${args.variant}`)
+        .then((response) => response.json())
+        .then(({ data }) => setButton(data))
+      }, [args.variant])
+      if(!button) {
+        return <></>
+      }
+      return (
+        <div className={`${args.bg} p-2`}>
+          <Button variant={args.variant} className={args.className} as={args.as || "a"}>{args.children || button.text}</Button>
+        </div>
+      )
+    }}
+  </Story>
+</Canvas>

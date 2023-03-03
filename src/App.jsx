@@ -1,4 +1,4 @@
-import "./app.css";
+import "./utilities/app.css";
 
 import PxHero from "./components/PxHero/index";
 import PxSkill from "./components/PxSkill/index";

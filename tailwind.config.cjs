@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  safelist: [
+    { pattern: /^(.*?)/ }
+  ],
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -20,7 +23,8 @@ module.exports = {
         "vuejs": "#41b883",
         "flickr-blue": "#065fd4",
         "yale-blue": "#174888",
-        "gray-c": "#cccccc"
+        "gray-c": "#cccccc",
+        "gray-warm-light": "#F9F7F4",
       },
       boxShadow: {
         "card-shadow": "0 0 6px rgba(0, 0, 0, 0.5)"
