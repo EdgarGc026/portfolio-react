@@ -1,0 +1,32 @@
+import React, { useState, useEffect } from "react"
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs"
+import SocialMediaButtonGroup from "."
+
+<Meta
+  title="Basics/CxSocialMediaButtonGroup/SocialMediaButtonGroup"
+  component={SocialMediaButtonGroup}
+  argTypes={{
+    socialMediaIcons: { table: { disable: true } },
+  }}
+/>
+
+<ArgsTable of={SocialMediaButtonGroup} />
+
+<Canvas>
+  <Story name="SocialMediaButtonGroup">
+    {(args) => {
+      const [socialMediaButtons, setSocialMediaButtons] = useState(null)
+      useEffect( () => {
+        fetch(`/socialMediaButtonGroup`)
+        .then(response => response.json())
+        .then(({ data }) => setSocialMediaButtons(data.socialMediaButtonGroup))
+      }, [])
+       if(!socialMediaButtons) {
+        return <></>
+      }
+      return (
+        <SocialMediaButtonGroup socialMediaIcons={socialMediaButtons} />
+      )
+    }}
+  </Story>
+</Canvas>
