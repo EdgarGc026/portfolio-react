@@ -19,7 +19,7 @@ import SocialMediaButtonGroup from "."
       useEffect( () => {
         fetch(`/socialMediaButtonGroup`)
         .then(response => response.json())
-        .then(({ data }) => setSocialMediaButtons(data.socialMediaButtonGroup))
+        .then((data) => setSocialMediaButtons(data))
       }, [])
        if(!socialMediaButtons) {
         return <></>
