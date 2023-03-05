@@ -9,8 +9,8 @@ const SocialMediaButtonGroup = ({ socialMediaIcons, ...props }) => {
     fullColumn: "col-span-full mb-[30px]",
     title: "text-[2.5rem] font-semibold",
     icons: {
-      item: "col-span-3",
-      container: "text-just-white text-[50px] hover:text-gray",
+      item: "col-span-3 hover:border-b-2 hover:border-solid",
+      container: "text-[50px]",
       iconStyle: "hover:text-gray-c"
     }
   };
@@ -35,8 +35,8 @@ const SocialMediaButtonGroup = ({ socialMediaIcons, ...props }) => {
   );
 };
 
-SocialMediaButtonGroup.PropTypes = {
-  socialMediaIcons: PropTypes.object
+SocialMediaButtonGroup.propTypes = {
+  socialMediaIcons: PropTypes.array
 };
 
 SocialMediaButtonGroup.defaultProps = {
