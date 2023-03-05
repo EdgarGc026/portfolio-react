@@ -1,0 +1,50 @@
+import React, { useState, useEffect } from "react"
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs"
+import Hero from "."
+
+<Meta
+  title="Basics/CxHero/Hero"
+  component={Hero}
+  argTypes={{
+    name: {
+      name: "Fullname",
+      control: { type: "text" }
+    },
+    profession: {
+      name: "Profession",
+      control: { type: "text" }
+    },
+    buttonText: {
+      name: "Button name",
+      control: { type: "text" }
+    },
+     buttonProps: { table: { disable: true } }
+  }}
+/>
+
+<ArgsTable of={Hero} />
+
+<Canvas>
+  <Story name="Hero">
+    {(args) => {
+      const [hero, setHero] = useState(null)
+      useEffect(() => {
+        fetch(`/heroComponent`)
+        .then(response => response.json())
+        .then((data) => setHero(data))
+      }, [])
+      if(!hero) {
+        return <></>
+      }
+      return (
+        <div className="p-2">
+          <Hero
+            name={args.name || hero.name}
+            profession={args.profession || hero.profession}
+            buttonText={args.buttonText || hero.button.buttonText}
+            buttonProps={hero.button} />
+        </div>
+      )
+    }}
+  </Story>
+</Canvas>
