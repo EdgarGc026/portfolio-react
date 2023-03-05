@@ -9,6 +9,14 @@ const heroComponent = {
     url: "https://drive.google.com/file/d/1mFTbUjSFcJ-gwbdTixT7M6jMHruNXyFY/view?usp=sharing"
   }
 };
+const socialMediaButtonGroup = [
+  { "id": 1, "name": "github", "url": "https://github.com/edgargc026" },
+  {
+    "id": 2, "name": "linkedin-in", "url": "https://www.linkedin.com/in/edgargc026/"
+  },
+  { "id": 3, "name": "twitter", "url": "https://twitter.com/edgargc026" },
+  { "id": 4, "name": "instagram", "url": "https://instagram.com/edgargc026" }
+];
 
 export const mockServer = createServer({
   routes() {
@@ -23,6 +31,10 @@ export const mockServer = createServer({
 
     this.get("/heroComponent", (schema, request) => {
       return heroComponent;
+    });
+
+    this.get(`/socialMediaButtonGroup`, (schema, request) => {
+      return socialMediaButtonGroup;
     });
   }
 });
