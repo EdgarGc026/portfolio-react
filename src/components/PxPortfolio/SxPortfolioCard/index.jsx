@@ -33,7 +33,7 @@ const SxPortfolioCard = () => {
       iconContainer: "flex items-center py-[10px] px-[5px]",
       icon: "portfolio--icons",
       buttonContainer: "button-container",
-      button: "button",
+      button: "button-portfolioItem",
       buttonIcon: "fab fa text-[20px] ml-[5px] text-center"
     }
   };
