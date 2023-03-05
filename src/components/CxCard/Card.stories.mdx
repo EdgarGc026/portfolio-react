@@ -1,0 +1,37 @@
+import React, { useState, useEffect } from "react"
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs"
+import Card from "."
+
+<Meta
+  title="Basics/CxCard/CardSkill"
+  component={Card}
+  argTypes={{
+    skillArray: { table: { disable: true } },
+  }}
+/>
+
+<ArgsTable of={Card} />
+
+<Canvas>
+  <Story name="CardSkill">
+    {(args) => {
+      const [card, setCard] = useState(null)
+      useEffect(() => {
+        fetch(`/skills`)
+        .then(response => response.json())
+        .then(data  => setCard(data))
+      }, [])
+      if(!card) {
+        return <></>
+      }
+      return (
+        <div>
+          <h2 className="mb-5 text-[2.5rem] text-center font-semibold">Skill</h2>
+          <section className="grid-layout grid-layout-mobile">
+            <Card skillArray={card} />
+          </section>
+        </div>
+      )
+    }}
+  </Story>
+</Canvas>
