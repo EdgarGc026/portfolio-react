@@ -1,7 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import { Link } from "react-router-dom";
-import Button from "../CxButton";
 import heroLogo from "../../assets/hero.svg";
 
 const Hero = ({ name, profession, buttonText, buttonProps, ...props }) => {
