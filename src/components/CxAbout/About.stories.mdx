@@ -1,0 +1,31 @@
+import React, { useState, useEffect } from "react"
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs"
+import About from "."
+
+<Meta
+  title="Basics/CxAbout/About"
+  component={About}
+/>
+
+<ArgsTable of={About} />
+
+<Canvas>
+  <Story name="About">
+    {(args) => {
+      const [about, setAbout] = useState(null)
+      useEffect(() => {
+        fetch(`/aboutComponent`)
+        .then(response => response.json())
+        .then((data) => setAbout(data))
+      }, [])
+      if(!about) {
+        return <></>
+      }
+      return(
+        <div className="p-2">
+          <About aboutArray={about} />
+        </div>
+      )
+    }}
+  </Story>
+</Canvas>

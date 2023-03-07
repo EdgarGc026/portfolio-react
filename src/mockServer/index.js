@@ -52,8 +52,14 @@ const skills = [
   }
 ]
 
+const aboutMe = [
+  {
+    "description": "Bachelor of Computer Technologies with a main focus on web development, using languages such as PHP and Java (working with creation and maintenance of monoliths and development, consumption and communication of APIs). In addition to technologies such as JavaScript, CSS, Tailwind and React, for Frontend development."
+  }
+]
+
 export const mockServer = createServer({
-  routes () {
+  routes() {
     this.get('/buttons/:variant', (schema, request) => {
       return {
         data: {
@@ -73,6 +79,10 @@ export const mockServer = createServer({
 
     this.get('/skills', (schema, request) => {
       return skills
+    })
+
+    this.get('/aboutComponent', (schema, request) => {
+      return aboutMe
     })
   }
 })
