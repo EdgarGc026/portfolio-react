@@ -1,38 +1,38 @@
-import React, { useEffect, useState } from "react";
-import { LOCAL_URL } from "../../constants/index";
-import heroLogo from "../../assets/hero.svg";
+import React, { useEffect, useState } from 'react'
+import { LOCAL_URL } from '../../constants/index'
+import heroLogo from '../../assets/hero.svg'
 
 const PxHero = () => {
-  const [headerData, setHeaderData] = useState(null);
+  const [headerData, setHeaderData] = useState(null)
 
   useEffect(() => {
-    async function getHeroData() {
+    async function getHeroData () {
       try {
-        const response = await fetch(LOCAL_URL);
-        const data = await response.json();
-        setHeaderData({ name: data.english.name, profession: data.english.profession });
+        const response = await fetch(LOCAL_URL)
+        const data = await response.json()
+        setHeaderData({ name: data.english.name, profession: data.english.profession })
       } catch (error) {
-        console.error(`Tuviste un error a la hora de obtener la info: ${error}`);
+        console.error(`Tuviste un error a la hora de obtener la info: ${error}`)
       }
     }
-    getHeroData();
-  }, []);
+    getHeroData()
+  }, [])
 
   if (!headerData) {
-    return <></>;
+    return <></>
   }
 
   const variantMap = {
-    header: "h-[500px]",
-    layout: "sm:grid-layout grid-layout-mobile",
-    firstColumn: "col-span-6 pr-5 text-justify font-raleway",
-    title: "font-semibold text-[2.5rem]",
-    description: "font-normal",
-    hidden: "parraph",
-    button: "button-hero",
-    secondColumn: "w-full h-auto col-span-6",
-    image: "sm:my-[20px] w-[95%] max-w-[450px] sm:mx-0 grid"
-  };
+    header: 'h-[500px]',
+    layout: 'sm:grid-layout grid-layout-mobile',
+    firstColumn: 'col-span-6 pr-5 text-justify font-raleway',
+    title: 'font-semibold text-[2.5rem]',
+    description: 'font-normal',
+    hidden: 'parraph',
+    button: 'button-hero',
+    secondColumn: 'w-full h-auto col-span-6',
+    image: 'sm:my-[20px] w-[95%] max-w-[450px] sm:mx-0 grid'
+  }
 
   return (
     <>
@@ -43,20 +43,21 @@ const PxHero = () => {
               {headerData.name} <br />
               <span className={variantMap.description}>{headerData.profession}</span>
             </h1>
-            <p className={variantMap.hidden}></p>
+            <p className={variantMap.hidden} />
             <a
-              href="https://drive.google.com/file/d/1mFTbUjSFcJ-gwbdTixT7M6jMHruNXyFY/view?usp=sharing"
+              href='https://drive.google.com/file/d/1mFTbUjSFcJ-gwbdTixT7M6jMHruNXyFY/view?usp=sharing'
               className={variantMap.button}
-              target="_blank"
-            >Get CV</a>
+              target='_blank' rel='noreferrer'
+            >Get CV
+            </a>
           </div>
           <div className={variantMap.secondColumn}>
-            <img className={variantMap.image} src={heroLogo} alt="hero-image" />
+            <img className={variantMap.image} src={heroLogo} alt='hero-image' />
           </div>
         </div>
       </header>
     </>
-  );
-};
+  )
+}
 
-export default PxHero;
+export default PxHero

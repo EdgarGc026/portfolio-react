@@ -1,12 +1,12 @@
-import React from "react";
-import SxPortfolioCard from "./SxPortfolioCard";
+import React from 'react'
+import SxPortfolioCard from './SxPortfolioCard'
 
 const PxPortfolio = () => {
   const variantMap = {
-    layout: "p-[15px] sm:p-[60px] grid-layout",
-    container: "col-span-full row-span-full mb-5",
-    title: "mb-5 text-[2.5rem] text-center font-semibold"
-  };
+    layout: 'p-[15px] sm:p-[60px] grid-layout',
+    container: 'col-span-full row-span-full mb-5',
+    title: 'mb-5 text-[2.5rem] text-center font-semibold'
+  }
 
   return (
     <section className={variantMap.layout}>
@@ -15,7 +15,7 @@ const PxPortfolio = () => {
         <SxPortfolioCard />
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default PxPortfolio;
+export default PxPortfolio

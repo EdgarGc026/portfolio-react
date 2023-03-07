@@ -1,11 +1,11 @@
-import React from "react";
-import SxSkillCard from "./SxSkillCard";
+import React from 'react'
+import SxSkillCard from './SxSkillCard'
 
 const PxSkill = () => {
   const variantMap = {
-    title: "mb-5 text-[2.5rem] text-center font-semibold",
-    layout: "grid-layout grid-layout-mobile"
-  };
+    title: 'mb-5 text-[2.5rem] text-center font-semibold',
+    layout: 'grid-layout grid-layout-mobile'
+  }
 
   return (
     <>
@@ -16,7 +16,7 @@ const PxSkill = () => {
         </section>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default PxSkill;
+export default PxSkill

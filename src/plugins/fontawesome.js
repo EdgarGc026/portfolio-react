@@ -1,5 +1,5 @@
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import {
   faLaravel,
   faWordpressSimple,
@@ -14,9 +14,8 @@ import {
   faHtml5,
   faCss3,
   faNodeJs,
-  faReact,
-} from "@fortawesome/free-brands-svg-icons";
-
+  faReact
+} from '@fortawesome/free-brands-svg-icons'
 
 library.add(
   faLaravel,
@@ -35,4 +34,4 @@ library.add(
   faCss3,
   faNodeJs,
   faPlus
-);
+)

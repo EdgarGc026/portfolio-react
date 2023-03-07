@@ -1,11 +1,11 @@
-import "./utilities/app.css";
+import './utilities/app.css'
 
-import PxHero from "./components/PxHero/index";
-import PxSkill from "./components/PxSkill/index";
-import PxPortfolio from "./components/PxPortfolio/index";
-import PxFooter from "./components/PxFooter/index";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import PxHero from './components/PxHero/index'
+import PxSkill from './components/PxSkill/index'
+import PxPortfolio from './components/PxPortfolio/index'
+import PxFooter from './components/PxFooter/index'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import {
   faLaravel,
   faJava,
@@ -22,10 +22,9 @@ import {
   faCss3,
   faNodeJs,
   faReact,
-  faVuejs,
-} from "@fortawesome/free-brands-svg-icons";
-import PxAbout from "./components/PxAbout";
-
+  faVuejs
+} from '@fortawesome/free-brands-svg-icons'
+import PxAbout from './components/PxAbout'
 
 library.add(
   faLaravel,
@@ -46,20 +45,18 @@ library.add(
   faNodeJs,
   faPlus,
   faVuejs
-);
+)
 
-
-function App() {
-
+function App () {
   return (
-    <div className="App">
+    <div className='App'>
       <PxHero />
       <PxSkill />
       <PxAbout />
       <PxPortfolio />
       <PxFooter />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
