@@ -1,8 +1,7 @@
-import React from "react"
-import PropTypes from "prop-types"
-import Button from "../CxButton"
+import React from 'react'
+import PropTypes from 'prop-types'
 import TailwindSvg from '../../assets/tailwind-css.svg'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Portfolio = ({ portfolioArray }) => {
   const variantStyle = {
@@ -43,17 +42,14 @@ const Portfolio = ({ portfolioArray }) => {
               {param.id === 4 && <img src={TailwindSvg} className='w-[25px]' />}
             </div>
             <div className={variantStyle.cardItem.buttonContainer}>
-              <a className={variantStyle.cardItem.button} target='_blank' href={param.source} rel='noreferrer'>
-                Source code
-                <FontAwesomeIcon icon={['fab', 'github']} className={variantStyle.cardItem.buttonIcon} />
-              </a>
-              <a className={variantStyle.cardItem.button} target='_blank' href={param.demo} rel='noreferrer'>
-                Demo
-                <FontAwesomeIcon
-                  icon={['fab', 'firefox-browser']}
-                  className={variantStyle.cardItem.buttonIcon}
-                />
-              </a>
+              {param.buttonGroup.map(({ id, url, iconName, text }) => {
+                return (
+                  <a className={variantStyle.cardItem.button} target='_blank' href={`${url}`} rel='noreferrer' key={id}>
+                    {text}
+                    <FontAwesomeIcon icon={['fab', `${iconName}`]} className={variantStyle.cardItem.buttonIcon} />
+                  </a>
+                )
+              })}
             </div>
           </article>
         )
