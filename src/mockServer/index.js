@@ -58,6 +58,110 @@ const aboutMe = [
   }
 ]
 
+const portfolioProjects = [
+  {
+    "id": 1,
+    "name": "Cody Holiday",
+    "description": " Created with HTML and CSS, SPA showing the cody vacations. Cody's pet from CodigoFacilito ",
+    "technologies": [
+      {
+        "id": 1,
+        "name": "html5"
+      },
+      {
+        "id": 2,
+        "name": "css3"
+      },
+      {
+        "id": 3,
+        "name": "js"
+      }
+    ],
+    "source": "https://github.com/EdgarGc026/vacaciones-cody",
+    "demo": "edgargc026.github.io/vacaciones-cody/"
+  },
+  {
+    "id": 2,
+    "name": "Batatabit movil",
+    "description": " Created with HTML and CSS. Static page for a bitcoin company.",
+    "technologies": [
+      {
+        "id": 1,
+        "name": "html5"
+      },
+      {
+        "id": 2,
+        "name": "css3"
+      }
+    ],
+    "source": "https://github.com/EdgarGc026/batatabit-mobile",
+    "demo": "https://edgargc026.github.io/batatabit-mobile/"
+  },
+  {
+    "id": 3,
+    "name": "Creaty Agency",
+    "description": " Created with Vuejs, HTML and CSS. Website of a web development agen ",
+    "technologies": [
+      {
+        "id": 1,
+        "name": "react"
+      },
+      {
+        "id": 2,
+        "name": "html5"
+      },
+      {
+        "id": 3,
+        "name": "css3"
+      }
+    ],
+    "source": "https://github.com/EdgarGc026/vue-agency",
+    "demo": "https://vue-agency.netlify.app/"
+  },
+  {
+    "id": 4,
+    "name": "Exchange, Crytpo App",
+    "description": " App that consumes the Coincase api to bring the information of the 20 most popular currencies in the market.  ",
+    "technologies": [
+      {
+        "id": 1,
+        "name": "react"
+      },
+      {
+        "id": 3,
+        "name": "html5"
+      },
+      {
+        "id": 4,
+        "name": "css3"
+      }
+    ],
+    "source": "https://github.com/EdgarGc026/exchange-app",
+    "demo": "https://exchange-cripto-app.netlify.app"
+  },
+  {
+    "id": 5,
+    "name": "Portfolio Web.",
+    "description": " Created with Vuejs, HTML and CSS, SPA that you can see just now ",
+    "technologies": [
+      {
+        "id": 1,
+        "name": "react"
+      },
+      {
+        "id": 2,
+        "name": "html5"
+      },
+      {
+        "id": 3,
+        "name": "css3"
+      }
+    ],
+    "source": "https://github.com/EdgarGc026/personal-website",
+    "demo": "https://edggc026.netlify.app/"
+  }
+]
+
 export const mockServer = createServer({
   routes() {
     this.get('/buttons/:variant', (schema, request) => {
@@ -83,6 +187,10 @@ export const mockServer = createServer({
 
     this.get('/aboutComponent', (schema, request) => {
       return aboutMe
+    })
+
+    this.get('/portfolioComponent', () => {
+      return portfolioProjects
     })
   }
 })
