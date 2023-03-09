@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import perfilImage from '../../assets/Perfil.png'
 
-const About = ({ aboutArray }) => {
+const About = ({ description }) => {
   const variantStyle = {
     container: 'about-us',
     layout: 'grid-layout',
@@ -17,14 +17,10 @@ const About = ({ aboutArray }) => {
   return (
     <section className={variantStyle.container}>
       <section className={variantStyle.layout}>
-        {aboutArray.map((param, index) => {
-          return (
-            <div key={index} className={variantStyle.infoContainer}>
-              <h2 className={variantStyle.title}>About me</h2>
-              <p className={variantStyle.description}>{param.description} 😎</p>
-            </div>
-          )
-        })}
+        <div className={variantStyle.infoContainer}>
+          <h2 className={variantStyle.title}>About me</h2>
+          <p className={variantStyle.description}>{description} 😎</p>
+        </div>
         <div className={variantStyle.infoImageContainer}>
           <img
             className={variantStyle.image}
@@ -39,11 +35,11 @@ const About = ({ aboutArray }) => {
 }
 
 About.propTypes = {
-  aboutArray: PropTypes.array
+  description: PropTypes.string
 }
 
 About.defaultProps = {
-  aboutArray: undefined
+  description: ""
 }
 
 export default About

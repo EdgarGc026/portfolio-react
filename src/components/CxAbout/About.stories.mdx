@@ -5,6 +5,12 @@ import About from "."
 <Meta
   title="Basics/CxAbout/About"
   component={About}
+  argTypes={{
+    description: {
+      name: "Description",
+      control: { type: "text" }
+    }
+  }}
 />
 
 <ArgsTable of={About} />
@@ -16,14 +22,14 @@ import About from "."
       useEffect(() => {
         fetch(`/aboutComponent`)
         .then(response => response.json())
-        .then((data) => setAbout(data))
+        .then((data) => setAbout(data[0].description))
       }, [])
       if(!about) {
         return <></>
       }
       return(
         <div className="p-2">
-          <About aboutArray={about} />
+          <About description={args.description || about} />
         </div>
       )
     }}
