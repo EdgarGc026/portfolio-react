@@ -5,6 +5,9 @@ import Portfolio from "."
 <Meta
   title="Basics/CxPortfolio/Portfolio"
   component={Portfolio}
+  argTypes={{
+    portfolioArray: { table: { disable: true } }
+  }}
 />
 
 <ArgsTable of={Portfolio} />
