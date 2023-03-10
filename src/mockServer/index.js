@@ -231,8 +231,10 @@ const portfolioProjects = [
   }
 ]
 
+const pageHomeData = {}
+
 export const mockServer = createServer({
-  routes () {
+  routes() {
     this.get('/buttons/:variant', (schema, request) => {
       return {
         data: {
@@ -264,6 +266,10 @@ export const mockServer = createServer({
 
     this.get('/portfolioProjects', (schema, request) => {
       return portfolioProjects
+    })
+
+    this.get(`/pageHome`, (schema, request) => {
+      return pageHomeData
     })
   }
 })
