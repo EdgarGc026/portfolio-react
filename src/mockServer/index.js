@@ -231,7 +231,11 @@ const portfolioProjects = [
   }
 ]
 
-const pageHomeData = {}
+const pageHomeData = {
+  heroComponent,
+  skills,
+  aboutMe,
+}
 
 export const mockServer = createServer({
   routes() {

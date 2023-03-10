@@ -1,12 +1,9 @@
 import React from "react"
 
-import { About, Button, Card, Hero, Portfolio, SocialMediaButtonGroup } from "../index"
-
-
 const PageHome = () => {
   return (
     <div>
-      <h1>Holi c:</h1>
+      <h1>hol1</h1>
     </div>
   )
 }

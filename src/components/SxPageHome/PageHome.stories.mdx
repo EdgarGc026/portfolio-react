@@ -1,16 +1,50 @@
-import React from "react"
-import { Meta, Story, Canvas ArgsTable } from "@storybook/addon-docs"
-import PageHome from "."
+import React, { useState, useEffect } from "react"
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs"
+import { Hero, Card, About } from "../index.js"
 
 <Meta
-  title="Pages/SxPageHome/Home"
-  component={PageHome}
+  title="Pages/SxPageHome"
+  argTypes={{
+    name: { table: { disable: true } },
+    profession: { table: { disable:true } },
+    buttonText: { table: { disable:true } },
+    buttonProps: { table: { disable: true } },
+    skillArray: { table: { disable: true } },
+    description: { table: { disable: true } },
+  }}
 />
 
 <ArgsTable of={PageHome} />
 
 <Canvas>
   <Story name="PageHome">
-    <h1>Hola, si funciono</h1>
+    {(args) => {
+      const [pageHomeData, setPageHomeData] = useState(null)
+      useEffect(() => {
+        fetch(`/pageHome`)
+        .then(response => response.json())
+        .then((data) => setPageHomeData(data))
+      }, [])
+      if(!pageHomeData) {
+        return <></>
+      }
+      return (
+        <div>
+          <Hero
+            name={pageHomeData.heroComponent.name}
+            profession={pageHomeData.heroComponent.profession}
+            buttonText={pageHomeData.heroComponent.button.buttonText}
+            buttonProps={pageHomeData.heroComponent.button}
+          />
+          <div>
+            <h2 className="mb-5 text-[2.5rem] text-center font-semibold">Skill</h2>
+            <section className="grid-layout grid-layout-mobile">
+              <Card skillArray={pageHomeData.skills} />
+            </section>
+          </div>
+          <About description={pageHomeData.aboutMe} />
+        </div>
+      )
+    }}
   </Story>
 </Canvas>
