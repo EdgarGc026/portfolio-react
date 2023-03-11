@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build-css": "npx tailwindcss -i ./src/utilities/index.css -o ./.storybook/tailwind.css --watch"
+    "build-css": "npx tailwindcss -i ./src/utilities/index.css -o ./.storybook/tailwind.css --watch",
+    "chromatic": "npx chromatic --project-token=d61f4dd4ebf4"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
@@ -44,5 +45,7 @@
   },
   "eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "portfolio-supreme@0.0.0"
 }
