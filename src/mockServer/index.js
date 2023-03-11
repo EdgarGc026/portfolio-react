@@ -240,7 +240,7 @@ const pageHomeData = {
 }
 
 export const mockServer = createServer({
-  routes() {
+  routes () {
     this.get('/buttons/:variant', (schema, request) => {
       return {
         data: {
@@ -274,7 +274,7 @@ export const mockServer = createServer({
       return portfolioProjects
     })
 
-    this.get(`/pageHome`, (schema, request) => {
+    this.get('/pageHome', (schema, request) => {
       return pageHomeData
     })
   }
