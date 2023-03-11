@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs"
-import { Hero, Card, About } from "../index.js"
+import { Hero, Card, About, Portfolio, SocialMediaButtonGroup } from "../index.js"
 
 <Meta
   title="Pages/SxPageHome"
@@ -11,6 +11,7 @@ import { Hero, Card, About } from "../index.js"
     buttonProps: { table: { disable: true } },
     skillArray: { table: { disable: true } },
     description: { table: { disable: true } },
+    portfolioArray: { table: {disable: true } },
   }}
 />
 
@@ -42,7 +43,14 @@ import { Hero, Card, About } from "../index.js"
               <Card skillArray={pageHomeData.skills} />
             </section>
           </div>
-          <About description={pageHomeData.aboutMe} />
+          <About description={pageHomeData.aboutMe[0].description} />
+          <section className="p-[15px] sm:p-[60px] grid-layout">
+            <div className="col-span-full row-span-full mb-5">
+              <h2 className="mb-5 text-[2.5rem] text-center font-semibold">Portfolio</h2>
+                <Portfolio portfolioArray={pageHomeData.portfolioProjects} />
+            </div>
+          </section>
+          <SocialMediaButtonGroup socialMediaIcons={pageHomeData.socialMediaButtonGroup} />
         </div>
       )
     }}

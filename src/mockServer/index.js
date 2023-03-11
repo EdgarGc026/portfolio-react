@@ -235,6 +235,8 @@ const pageHomeData = {
   heroComponent,
   skills,
   aboutMe,
+  portfolioProjects,
+  socialMediaButtonGroup
 }
 
 export const mockServer = createServer({

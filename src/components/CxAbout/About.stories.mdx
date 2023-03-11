@@ -22,14 +22,15 @@ import About from "."
       useEffect(() => {
         fetch(`/aboutComponent`)
         .then(response => response.json())
-        .then((data) => setAbout(data[0].description))
+        .then((data) => setAbout(data))
       }, [])
       if(!about) {
         return <></>
       }
+      console.log(about[0].description)
       return(
         <div className="p-2">
-          <About description={args.description || about} />
+          <About description={args.description || about[0].description} />
         </div>
       )
     }}

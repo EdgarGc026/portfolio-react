@@ -35,11 +35,11 @@ const About = ({ description }) => {
 }
 
 About.propTypes = {
-  description: PropTypes.string
+  description: PropTypes.string,
 }
 
 About.defaultProps = {
-  description: ""
+  description: "",
 }
 
 export default About
